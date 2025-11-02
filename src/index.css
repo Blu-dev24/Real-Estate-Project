@@ -45,6 +45,14 @@
   p{
     @apply leading-normal text-sm sm:text-base md:text-lg text-gray-600
   }
+
+  .section{
+    @apply pt-[90px] md:pt-[150px]
+  }
+
+  h2{
+    @apply text-2xl sm:text-3xl
+  }
 }
 /* Header */
 
