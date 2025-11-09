@@ -2,9 +2,12 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from '@remixicon/react'
 import React from 'react'
 import { cardItems } from '../constant/data'
 import {Swiper, SwiperSlide} from 'swiper/react'
+import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 
 // Swiper Styles
 import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 const PopularProperties = () => {
     return (
@@ -20,17 +23,25 @@ const PopularProperties = () => {
 
                     {/* Navigation Buttons */}
                     <div className="flex items-center gap-5 mb-5">
-                        <button className="bg-sky-600 text-white h-12 w-12 flex items-center justify-center  rounded-full hover:bg-sky-800 transition-colors active:bg-sky-700">
+                        <button className="bg-sky-600 text-white h-12 w-12 flex items-center justify-center  rounded-full hover:bg-sky-800 transition-colors active:bg-sky-700 prev-btn">
                             <RiArrowLeftSLine size={24} />
                         </button>
-                        <button className="bg-sky-600 text-white h-12 w-12 flex items-center justify-center  rounded-full hover:bg-sky-800 transition-colors active:bg-sky-700">
+                        <button className="bg-sky-600 text-white h-12 w-12 flex items-center justify-center  rounded-full hover:bg-sky-800 transition-colors active:bg-sky-700 next-btn">
                             <RiArrowRightSLine size={24} />
                         </button>
                     </div>
                 </div>
 
                 {/* Card Wrapper */}
-                <Swiper className="">
+                <Swiper modules={[Navigation, Autoplay, Pagination]}
+                pagination={{clickable:true}}
+                loop={true}
+                autoplay={true}
+                navigation={{
+                    prevEl: '.prev-btn',
+                    nextEl: '.next-btn'
+                }}
+                className="">
                     {cardItems.map(item => (
                         <SwiperSlide className=''>
                             {/* Card */}
@@ -59,6 +70,6 @@ const PopularProperties = () => {
             </div>
         </section>
     )
-}
+}   
 
 export default PopularProperties
