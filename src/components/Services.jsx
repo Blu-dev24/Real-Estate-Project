@@ -15,12 +15,13 @@ const Services = () => {
                 {ServicesCardItem.map(item=>(
 
                     // card
-                    <div className="border border-gray-300 .p-[36px] rounded-lg bg-white hover:border-sky-400 transition">
-                        <div className="">
-                            <img src={item.icon} alt={item.title} width={70} height={70}/>
-                        </div>
-                        <h4 className=''>{item.title}</h4>
+                    <div className="border border-gray-300 p-9 rounded-lg bg-white hover:border-sky-400 transition">
+                    <div>
+                      <img src={item.icon} alt={item.title} width={70} height={70} />
                     </div>
+                    <h4>{item.title}</h4>
+                  </div>
+                  
 
                 ))}
             </ul>
