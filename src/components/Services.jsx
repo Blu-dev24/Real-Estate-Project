@@ -20,6 +20,7 @@ const Services = () => {
                       <img src={item.icon} alt={item.title} width={70} height={70} />
                     </div>
                     <h4>{item.title}</h4>
+                    <p>{item.text}</p>
                   </div>
                   
 
