@@ -53,6 +53,9 @@
   h2{
     @apply text-2xl sm:text-3xl
   }
+  .subtitle{
+    @apply font-medium text-sky-700
+  }
 }
 /* Header */
 

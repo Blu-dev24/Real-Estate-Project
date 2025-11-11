@@ -41,9 +41,15 @@ const PopularProperties = () => {
                     prevEl: '.prev-btn',
                     nextEl: '.next-btn'
                 }}
+
+                spaceBetween={30}
+                breakpoints={{
+                    575:{slidesPerView:2,},
+                    993:{slidesPerView:3}
+                }}
                 className="">
                     {cardItems.map(item => (
-                        <SwiperSlide className=''>
+                        <SwiperSlide className='' key={item.id}>
                             {/* Card */}
                             <div className="">
                                 {/* Card Image */}
