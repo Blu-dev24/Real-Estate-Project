@@ -28,6 +28,10 @@ const Testimonials = () => {
                         pauseOnMouseEnter: true
                     }}
                     breakpoints={{ 768: { slidesPerView: 2 } }}
+                    navigation={{
+                        nextEl: '.next-btn',
+                        prevEl: '.prev-btn',
+                    }}
                 >
                     {testimonialItems.map(item => (
                         // card swiper slide
@@ -54,9 +58,9 @@ const Testimonials = () => {
                 </Swiper>
 
                 {/* Navigation Buttons */}
-                <div className="flex justify-center items-center mt-12 gap-6">
-                    <button><RiArrowLeftSLine /></button>
-                    <button><RiArrowRightSLine /></button>
+                <div className="flex justify-center items-center mt-12 gap-6 max-md:hidden">
+                    <button className='bg-sky-500 text-white rounded-full flex items-center justify-center hover:bg-sky-700 transition-colors h-12 w-12 prev-btn'><RiArrowLeftSLine /></button>
+                    <button className='bg-sky-500 text-white rounded-full flex items-center justify-center hover:bg-sky-700 transition-colors h-12 w-12 next-btn'><RiArrowRightSLine /></button>
                 </div>
             </div>
         </section>
