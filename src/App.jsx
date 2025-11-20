@@ -6,6 +6,7 @@ import Services from './components/Services.jsx'
 import About from './components/About.jsx'
 import Team from './components/Team.jsx'
 import Testimonials from './components/Testimonials.jsx'
+import Blog from './components/Blog.jsx'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <About/>
       <Team/>
       <Testimonials/>
+      <Blog/>
     </main>
     </>
   )
