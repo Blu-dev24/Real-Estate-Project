@@ -7,6 +7,7 @@ import About from './components/About.jsx'
 import Team from './components/Team.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import Blog from './components/Blog.jsx'
+import Cta from './components/Cta.jsx'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Team/>
       <Testimonials/>
       <Blog/>
+      <Cta/>
     </main>
     </>
   )
