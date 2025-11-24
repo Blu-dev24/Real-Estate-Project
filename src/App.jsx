@@ -8,6 +8,7 @@ import Team from './components/Team.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import Blog from './components/Blog.jsx'
 import Cta from './components/Cta.jsx'
+import Footer from './components/Footer.jsx'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Blog/>
       <Cta/>
     </main>
+    <Footer/>
     </>
   )
 }
