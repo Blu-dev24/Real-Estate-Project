@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { RiCloseFill, RiMenuFill } from '@remixicon/react';
 import { navItems } from '../constant/data'
 import Button from './Button';
@@ -9,8 +9,22 @@ const Header = () => {
     const handleClick = () => {
       setIsOpen(!isOpen);
     }
+    const headRef = useRef(null)
+    useEffect(()=>{
+      const handleScroll = () => {
+        if(window.scrollY > 100){
+          headRef.current.classList.add('active')
+        }else{
+          headRef.current.classList.remove('active')
+        }
+      }
+      window.addEventListener('scroll', handleScroll)
+      return() => {
+        window.removeEventListener('scroll', handleScroll)
+      }
+    })
   return (
-    <header className="header">
+    <header className="header" ref={headRef} id='#'>
       <div className="container flex items-center justify-between">
         <a href="#">
           <img src="/images/Logo.png" alt="logo" width={115} height={59} />

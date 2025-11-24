@@ -60,7 +60,21 @@
 /* Header */
 
 .header {
-  @apply w-full bg-sky-700 text-white py-4 fixed top-0 left-0 z-40;
+  @apply w-full text-white py-4 fixed top-0 left-0 z-40;
+}
+
+.header.active{
+  @apply bg-sky-700;
+  animation: slideIn 0.5s forwards ease-in-out;
+}
+
+@keyframes slideIn {
+  0%{
+    transform: translateY(-100%)
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
 
 .navbar{

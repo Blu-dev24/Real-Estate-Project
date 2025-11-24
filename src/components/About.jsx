@@ -10,7 +10,7 @@ const About = () => {
         threshold:0.3 // starts when 30% of the component is visible
     })
     return (
-        <section className=''>
+        <section className='' id='about'>
             <div className="container grid gap-[50px] md:items-center md:grid-cols-2">
                 {/* content */}
                 <div className="md:order-1">

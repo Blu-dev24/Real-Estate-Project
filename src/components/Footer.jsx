@@ -3,7 +3,7 @@ import { footerListItems, footerSocialIcons } from '../constant/data'
 
 const Footer = () => {
     return (
-        <footer className="bg-neutral-800 text-neutral-100 pb-9 pt-[60px] ">
+        <footer className="bg-neutral-800 text-neutral-100 pb-9 pt-[60px]" id='contact'>
             <div className="container">
                 {/* {footer top} */}
                 <div className='grid gap-7 sm:grid-cols-2 md:grid-cols-4'>
