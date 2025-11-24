@@ -3,28 +3,30 @@ import { RiCloseFill, RiMenuFill } from '@remixicon/react';
 import { navItems } from '../constant/data'
 import Button from './Button';
 
-
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const handleClick = () => {
-      setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  }
+
+  const headRef = useRef(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        headRef.current.classList.add('active')
+      } else {
+        headRef.current.classList.remove('active')
+      }
     }
-    const headRef = useRef(null)
-    useEffect(()=>{
-      const handleScroll = () => {
-        if(window.scrollY > 100){
-          headRef.current.classList.add('active')
-        }else{
-          headRef.current.classList.remove('active')
-        }
-      }
-      window.addEventListener('scroll', handleScroll)
-      return() => {
-        window.removeEventListener('scroll', handleScroll)
-      }
-    })
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="header" ref={headRef} id='#'>
+    <header className="header" ref={headRef}>
       <div className="container flex items-center justify-between">
         <a href="#">
           <img src="/images/Logo.png" alt="logo" width={115} height={59} />
@@ -39,7 +41,14 @@ const Header = () => {
           <ul className="flex flex-col flex-1 justify-center items-center gap-10">
             {navItems.map(item => (
               <li key={item.id}>
-                <a href={item.href} className='hover:text-sky-600 transition-colors text-lg font-medium'>{item.label}</a>
+                {/* FIX → close menu when clicking a link */}
+                <a
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-sky-600 transition-colors text-lg font-medium"
+                >
+                  {item.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -52,19 +61,26 @@ const Header = () => {
           <RiMenuFill size={30} />
         </button>
 
-        {/* lg Menu */}
+        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 md:items-center">
           {navItems.map(item => (
             <li key={item.id}>
-              <a href={item.href} className='hover:text-gray-200 font-medium transition-colors'>{item.label}</a>
+              <a
+                href={item.href}
+                className="hover:text-gray-200 font-medium transition-colors"
+              >
+                {item.label}
+              </a>
             </li>
           ))}
-
           <Button label='Get Started' className='primary-btn' />
         </ul>
 
         {/* Overlay */}
-          <div className={`overlay ${isOpen ? 'active' : ''}`} onClick={handleClick}></div>
+        <div
+          className={`overlay ${isOpen ? 'active' : ''}`}
+          onClick={handleClick}
+        />
       </div>
     </header>
   )
