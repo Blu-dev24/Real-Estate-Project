@@ -64,7 +64,7 @@
 }
 
 .header.active{
-  @apply bg-sky-700;
+  background-color: #01296e;
   animation: slideIn 0.5s forwards ease-in-out;
 }
 
@@ -76,6 +76,19 @@
     transform: translateY(0);
   }
 }
+
+.slider-btn {
+  background-color: #01296e; /* your hex code */
+}
+
+.slider-btn:hover {
+  background-color: #01296e; /* hex for hover */
+}
+
+.slider-btn:active {
+  background-color: #01296e; /* hex for active */
+}
+
 
 .navbar{
     @apply md:hidden fixed top-0 left-0 bg-white h-screen max-w-[280px] w-full text-gray-900 p-7 z-40 flex flex-col transition-transform -translate-x-[280px]

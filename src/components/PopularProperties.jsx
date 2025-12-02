@@ -23,10 +23,10 @@ const PopularProperties = () => {
 
                     {/* Navigation Buttons */}
                     <div className="flex items-center gap-5 mb-5 max-md:hidden">
-                        <button className="bg-sky-600 text-white h-12 w-12 flex items-center justify-center  rounded-full hover:bg-sky-800 transition-colors active:bg-sky-700 prev-btn">
+                        <button className="bg-sky-600 text-white h-12 w-12 flex items-center justify-center  rounded-full hover:bg-sky-800 transition-colors active:bg-sky-700 slider-btn">
                             <RiArrowLeftSLine size={24} />
                         </button>
-                        <button className="bg-sky-600 text-white h-12 w-12 flex items-center justify-center  rounded-full hover:bg-sky-800 transition-colors active:bg-sky-700 next-btn">
+                        <button className="bg-sky-600 text-white h-12 w-12 flex items-center justify-center  rounded-full hover:bg-sky-800 transition-colors active:bg-sky-700 slider-btn">
                             <RiArrowRightSLine size={24} />
                         </button>
                     </div>
