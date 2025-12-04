@@ -54,16 +54,16 @@ const PopularProperties = () => {
                                 {/* Card Content */}
                                 <div className="">
                                     <div className='flex justify-between'>
-                                        <a href="#" className='text-[18px] text-black'> {item.name}</a>
-                                        <b className='text-[20px]'>{item.price}</b>
+                                        <a href="#" className='text-[17px] text-[#00163D]'> {item.name}</a>
+                                        <b className='text-[20px] text-[#00163D]'>{item.price}</b>
                                     </div>
 
-                                    <p className='text-black' >{item.location}</p>
+                                    <p className='text-[#00163D] text-[17px]' >{item.location}</p>
 
                                     <div className="grid grid-cols-3 pb-20 mt-5">
-                                        <p className='text-black'>{item.bed}</p>
-                                        <p className='text-black'>{item.bath}</p>
-                                        <p className='text-black'>{item.area}</p>
+                                        <p className='text-[#00163D] text-[17px]'>{item.bed}</p>
+                                        <p className='text-[#00163D] text-[17px]' >{item.bath}</p>
+                                        <p className='text-[#00163D] text-[17px]'>{item.area}</p>
                                     </div>
                                 </div>
                             </div>

@@ -3,7 +3,10 @@ import Button from './Button'
 
 const Hero = () => {
     return (
-        <section className='py-10 bg-[url(/images/hero-banner.png)] bg-cover bg-no-repeat bg-center lg:bg-[center_10%] min-h-screen lg:min-h-[860px] flex items-center' id='home'>
+        <section className='py-10 bg-[url(/images/hero-banner.png)] bg-cover bg-no-repeat bg-[center_10%] sm:bg-[55%_10%] md:bg-center
+ min-h-screen lg:min-h-[860px] flex items-center' id='home'>
+
+            
 
             <div className="container text-gray-50">
                 <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-[64px]'>Find the <br /> Property That <br /> Feels Like Home.</h1>

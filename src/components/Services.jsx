@@ -5,10 +5,9 @@ const Services = () => {
   return (
     <section className="py-[90px] bg-[#e9eff2] md:py-[50px]">
       <div className="container">
-        <p className="subtitle text-2xl">
-          Services
-        </p>
-        <h2>Services we offer</h2>
+        <h1 className="subtitle text-4xl">
+          Services - What We Offer
+        </h1>
 
         {/* lists */}
         <ul className="grid gap-6 mt-10 md:mt-16 sm:grid-cols-2 xs:grid-cols-2 lg:grid-cols-4">
