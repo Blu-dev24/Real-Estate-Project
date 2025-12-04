@@ -5,47 +5,45 @@ import Button from './Button';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const headRef = useRef(null);
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  }
-
-  const headRef = useRef(null)
+  const handleToggleMenu = () => setIsOpen(prev => !prev);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
-        headRef.current.classList.add('active')
+        headRef.current?.classList.add('active');
       } else {
-        headRef.current.classList.remove('active')
+        headRef.current?.classList.remove('active');
       }
-    }
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header className="header" ref={headRef}>
       <div className="container flex items-center justify-between">
+
+        {/* Logo */}
         <a href="#">
           <img src="/images/Logo.png" alt="logo" width={115} height={59} />
         </a>
 
         {/* Mobile Menu */}
         <nav className={`navbar ${isOpen ? 'active' : ''}`}>
-          <button className="ml-auto mb-10" onClick={handleClick}>
+          <button className="ml-auto mb-10" onClick={handleToggleMenu}>
             <RiCloseFill size={30} />
           </button>
 
           <ul className="flex flex-col flex-1 justify-center items-center gap-10">
             {navItems.map(item => (
               <li key={item.id}>
-                {/* FIX → close menu when clicking a link */}
                 <a
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="hover:text-sky-600 transition-colors text-lg font-medium"
+                  className="nav-link text-lg font-medium transition-colors hover:text-sky-600"
                 >
                   {item.label}
                 </a>
@@ -53,37 +51,37 @@ const Header = () => {
             ))}
           </ul>
 
-          <Button label='Get Started' className='secondary-btn' />
+          <Button label="Get Started" className="secondary-btn" />
         </nav>
 
-        {/* Menu Toggle */}
-        <button className="md:hidden" onClick={handleClick}>
+        {/* Mobile Toggle Button */}
+        <button className="md:hidden" onClick={handleToggleMenu}>
           <RiMenuFill size={30} />
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-10 md:items-center">
+        <ul className="hidden md:flex gap-10 items-center">
           {navItems.map(item => (
             <li key={item.id}>
               <a
                 href={item.href}
-                className="hover:text-gray-200 font-medium transition-colors"
+                className="nav-link font-medium transition-colors hover:text-gray-200"
               >
                 {item.label}
               </a>
             </li>
           ))}
-          <Button label='Get Started' className='primary-btn' />
+          <Button label="Get Started" className="primary-btn" />  
         </ul>
 
         {/* Overlay */}
         <div
           className={`overlay ${isOpen ? 'active' : ''}`}
-          onClick={handleClick}
+          onClick={handleToggleMenu}
         />
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
