@@ -47,7 +47,7 @@
   }
 
   .section{
-    @apply pt-[90px] md:pt-[150px]
+    @apply pt-[90px] md:pt-[90px]
   }
 
   h2{

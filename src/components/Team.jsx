@@ -5,7 +5,7 @@ import Button from './Button'
 
 const Team = () => {
     return (
-        <section className="py-[90px] md:py-[150px] bg-[#0F172A]">
+        <section className="py-[90px] md:py-[90px] bg-[#0F172A]">
             <div className="container">
                 <p className=" text-gray-300">Our Team</p>
                 <h2 className='text-white'>Meet Our Team</h2>
