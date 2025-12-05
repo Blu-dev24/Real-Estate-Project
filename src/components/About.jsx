@@ -10,12 +10,13 @@ const About = () => {
         threshold:0.3 // starts when 30% of the component is visible
     })
     return (
-        <section className='' id='about'>
-            <div className="container grid gap-[50px] md:items-center md:grid-cols-2">
+        <section className='bg-[#FFF4E6]
+ 'id='about'>
+            <div className="container grid gap-[50px] md:items-center md:grid-cols-2 p-5">
                 {/* content */}
                 <div className="md:order-1">
                     <p className="subtitle">About Us</p>
-                    <h2>Who We Are</h2>
+                    <h2 className='text-[#01296e]'>Who We Are</h2>
                     <p className='mt-4 mb-8'>
                         At Homely, we connect people with homes they love. With over 10 years of industry experience, we provide expert guidance for buyers, sellers, and investors across multiple cities.
                     </p>
@@ -24,12 +25,12 @@ const About = () => {
                     <div className='flex flex-wrap items-center justify-center gap-5 md:gap-10 text-center md:justify-start' ref={ref}>
                         {
                             stats.map(stat => (<div key={stat.id}>
-                                <h3 className='text-3xl md:text-4xl font-bold text-sky-600'>{inView && <CountUp end={stat.value} duration={2}/>} + </h3>
+                                <h3 className='text-3xl md:text-4xl font-bold text-[#01296e]'>{inView && <CountUp end={stat.value} duration={2}/>} + </h3>
                                 <p>{stat.label}</p>
                             </div>))
                         }
                     </div>
-                    <Button label='Read More' className='secondary-btn mt-8'>Read More</Button>
+                    <Button label='Read More' className='secondary-btn mt-8 bg-[#01296e]'>Read More</Button>
                 </div>
                 {/*banner*/}
                 <figure>
