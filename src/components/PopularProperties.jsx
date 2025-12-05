@@ -18,7 +18,7 @@ const PopularProperties = () => {
                 <div className="flex justify-center items-center lg:justify-between lg:items-center">
 
                     <div className="text-center max-w-[600px] mx-auto">
-                        <h2 className='text-[34px] sm:text-[42px] lg:text-[50px] font-medium tracking-wider text-[#00163D]'>Premium Properties 123456789</h2>
+                        <h2 className='text-[34px] sm:text-[42px] lg:text-[50px] font-medium tracking-wider text-[#00163D]'>Premium Properties</h2>
                         <p className="max-w-[500px] mt-4 mb-7 mx-auto text-white">
                             Discover handpicked properties that combine modern living, prime locations, and unmatched value.
                         </p>
