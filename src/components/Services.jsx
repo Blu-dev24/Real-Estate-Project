@@ -3,9 +3,9 @@ import { ServicesCardItem } from '../constant/data'
 
 const Services = () => {
   return (
-    <section className="py-[90px] bg-[#e9eff2] md:py-[60px]">
+    <section className="py-[90px] bg-linear-to-b from-gray-300 to-blue-900 md:py-[50px] text-center text-5xl">
       <div className="container">
-        <h1 className="subtitle text-5xl text-center mt-15 mb-20">
+        <h1 className="subtitle text-4xl">
           Services - What We Offer
         </h1>
 
