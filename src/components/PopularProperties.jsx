@@ -22,7 +22,6 @@ const PopularProperties = () => {
                             Discover handpicked properties that combine modern living, prime locations, and unmatched value.
                         </p>
                     </div>
-
                 </div>
 
                 {/* Card Wrapper */}

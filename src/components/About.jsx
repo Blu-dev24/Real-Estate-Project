@@ -6,12 +6,11 @@ import { useInView } from 'react-intersection-observer'
 
 const About = () => {
     const { ref, inView } = useInView({
-        triggerOnce: true, // only trigger once
-        threshold:0.3 // starts when 30% of the component is visible
+        triggerOnce: true,
+        threshold: 0.3 
     })
     return (
-        <section className='bg-[#FFF4E6]
- 'id='about'>
+        <section className='bg-[#FFF4E6] py-20' id='about'>
             <div className="container grid gap-[50px] md:items-center md:grid-cols-2 p-5">
                 {/* content */}
                 <div className="md:order-1">
@@ -25,7 +24,7 @@ const About = () => {
                     <div className='flex flex-wrap items-center justify-center gap-5 md:gap-10 text-center md:justify-start' ref={ref}>
                         {
                             stats.map(stat => (<div key={stat.id}>
-                                <h3 className='text-3xl md:text-4xl font-bold text-[#01296e]'>{inView && <CountUp end={stat.value} duration={2}/>} + </h3>
+                                <h3 className='text-3xl md:text-4xl font-bold text-[#01296e]'>{inView && <CountUp end={stat.value} duration={2} />} + </h3>
                                 <p>{stat.label}</p>
                             </div>))
                         }
