@@ -12,7 +12,7 @@ const Services = () => {
         {/* lists */}
         <ul className="grid gap-6 mt-10 md:mt-16 sm:grid-cols-2 xs:grid-cols-2 lg:grid-cols-4">
           {ServicesCardItem.map(item => (
-
+            
             // card
             <div className="border border-gray-300 p-9 rounded-lg bg-white hover:border-[#01296e] transition" key={item.id}>
               <div className='bg-sky-200/30 max-w-max p-5 rounded-full font-bold my-3'>

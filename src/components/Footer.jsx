@@ -33,7 +33,7 @@ const Footer = () => {
                                         <a href="#" className='text-neutral-50/60 hover:text-neutral-100 transition'>
                                             {link.label}
                                         </a>
-                                    </li>
+                                    </li>   
                                 ))}
                             </ul>
                         </div>
