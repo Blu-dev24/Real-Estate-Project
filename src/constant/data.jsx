@@ -6,9 +6,9 @@ import {
 } from "@remixicon/react";
 
 export const navItems = [
-  { id: 1, label: "Home", href: "#home" },
-  { id: 2, label: "About", href: "#about" },
-  { id: 3, label: "Properties", href: "#properties" },
+  { id: 1, label: "Home", href: "/" },
+  { id: 2, label: "About", href: "/about" },
+  { id: 3, label: "Properties", href: "/properties#abcd" },
   { id: 4, label: "Contact", href: "#contact" },
 ];
 
@@ -16,7 +16,7 @@ export const cardItems = [
   {
     id: 1,
     imgURL: "./images/card1.png",
-    price: "$1200",
+    price: "$1200", 
     name: "Luxury Lakeside Villa",
     location: "Crystal Shores, Lake Serenity",
     bed: "2 Bed",
